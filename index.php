@@ -8,13 +8,13 @@
     <link rel="stylesheet" href="CSS/style.css" type="text/css">
     
 </head>
-<body
+<body>
 <div class="header">
   <h1>El Picante</h1>
 </div>
 
 <div>
-<?php include 'navbar.html';?>
+<?php include 'navbar.php';?>
 </div>
 
 <div class="row">
@@ -36,19 +36,9 @@
   </div>
   <div class="rightcolumn">
     <div class="card">
-      <h2>About Me</h2>
+      <h2>Dnevni Recept</h2>
       <div class="fakeimg" style="height:100px;">Image</div>
-      <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
-    </div>
-    <div class="card">
-      <h3>Popular Post</h3>
-      <div class="fakeimg"><p>Image</p></div>
-      <div class="fakeimg"><p>Image</p></div>
-      <div class="fakeimg"><p>Image</p></div>
-    </div>
-    <div class="card">
-      <h3>Follow Me</h3>
-      <p>Some text..</p>
+      <p>TEXTTEXTTEXTTEXTTEXT TEXTTEXT TEXTTEXTTEXT</p>
     </div>
   </div>
 </div>

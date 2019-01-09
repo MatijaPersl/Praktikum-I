@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="CSS\navbar.css" type="text/css">
        
 </head>
-<body
+<body>
 <div class="topnav">
   <a href="#">Link</a>
   <a href="#">Link</a>
