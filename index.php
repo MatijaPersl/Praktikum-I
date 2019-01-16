@@ -6,6 +6,7 @@
     <title>Index</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="CSS/style.css" type="text/css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     
 </head>
 <body>
@@ -17,34 +18,24 @@
 <?php include 'navbar.php';?>
 </div>
 
-<div class="row">
-  <div class="leftcolumn">
-    <div class="card">
-      <h2>TITLE HEADING</h2>
-      <h5>Title description, Dec 7, 2017</h5>
-      <div class="fakeimg" style="height:200px;">Image</div>
-      <p>Some text..</p>
-      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-    </div>
-    <div class="card">
-      <h2>TITLE HEADING</h2>
-      <h5>Title description, Sep 2, 2017</h5>
-      <div class="fakeimg" style="height:200px;">Image</div>
-      <p>Some text..</p>
-      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-    </div>
-  </div>
-  <div class="rightcolumn">
-    <div class="card">
-      <h2>Dnevni Recept</h2>
-      <div class="fakeimg" style="height:100px;">Image</div>
-      <p>TEXTTEXTTEXTTEXTTEXT TEXTTEXT TEXTTEXTTEXT</p>
-    </div>
-  </div>
+<div class="w3-container">
+  <h2>Izberi hrano</h2>
+  <p>Izberite svoj najljubši taco spodaj</p>
+  <ul class="w3-ul w3-hoverable">
+    <li>Jill</li>
+    <li>Eve</li>
+    <li>Adam</li>
+  </ul>
 </div>
 
+<div class=" ">
+
+
+</div>
+
+
 <div class="footer">
-  <h2>Footer</h2>
+  <p>El Picante d.o.o  &nbsp tel: 01/2525 52 52</p>
 </div>
 <?php
        
