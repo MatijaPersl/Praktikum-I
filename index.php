@@ -4,10 +4,16 @@
 
 
 <main>
+<?php
+  if (isset($_SESSION['userId'])) {
+    echo '<p class="login-status">you are logged in</p>';
+  }
+  else {
+    echo '<p class="login-status">you are logged out</p>';
+  }
+?>
 
 
-  <p>you are logged out!</p>
-  <p>you are logged in!</p>
 
 </main>
 
@@ -16,5 +22,3 @@
   require 'footer.php';
 // ctrl alt b  = {}, ctrl alt f = []
 ?>
-
-
