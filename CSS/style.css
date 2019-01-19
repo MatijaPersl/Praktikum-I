@@ -28,3 +28,9 @@ li a:hover {
 .active {
   background-color: #4CAF50;
 }
+
+.login{
+  float: right;
+  margin-top: 10px;
+  margin-right: 10px;
+}
