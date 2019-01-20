@@ -15,7 +15,7 @@
   </head>
   <body>
 
-    
+
     <header>
       <nav class="nav-header-main">
 
@@ -34,7 +34,7 @@
         Also notice that using PHP, we can choose whether or not to show the login/signup form, or to show the logout form, if we are logged in or not. We do this based on SESSION variables which I explain in more detail in the login.inc.php file!
         -->
         <?php
-        if (!isset($_SESSION['id'])) {
+        if (!isset($_SESSION['uid'])) {
           echo '<form action="includes/login.inc.php" method="post">
             <input type="text" name="mailuid" placeholder="E-mail/Username">
             <input type="password" name="pwd" placeholder="Password">
@@ -42,7 +42,7 @@
           </form>
           <a href="signup.php" class="header-signup">Signup</a>';
         }
-        else if (isset($_SESSION['id'])) {
+        else  { // if (isset($_SESSION['id']))
           echo '<form action="includes/logout.inc.php" method="post">
             <button type="submit" name="login-submit">Logout</button>
           </form>';

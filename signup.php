@@ -1,5 +1,6 @@
 <?php
   require 'header.php';
+  error_reporting(0); // da skrijem prvi error
 ?>
 
 <main>

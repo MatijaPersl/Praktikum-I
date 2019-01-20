@@ -5,7 +5,7 @@
 
 <main>
 <?php
-  if (isset($_SESSION['userId'])) {
+  if (isset($_SESSION['uid'])) {
     echo '<p class="login-status">you are logged in</p>';
   }
   else {
