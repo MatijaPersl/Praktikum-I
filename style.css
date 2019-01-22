@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web');
+
 * {
   margin: 0;
   padding: 0;
-  text-decoration: none;
+
 }
 
 button {
@@ -10,11 +12,12 @@ button {
 
 body {
   background-color: #F3F3F3;
+  margin-left: 50px;
 }
 
 .wrapper-main {
-  width: 900px;
-  margin: 0 auto;
+  width: 1000px;
+  margin-left: 50px auto;
 }
 
 header {
@@ -101,20 +104,6 @@ header {
   text-align: center;
 }
 
-.header-signup {
-  height: 100%;
-  width: 70px;
-  padding: 0 6px;
-  border: none;
-  border-radius: 4px;
-  margin-left: 8px;
-  font-family: arial;
-  font-size: 13px;
-  line-height: 36px;
-  color: #111;
-  text-transform: uppercase;
-  text-align: center;
-}
 
 main {
   padding-top: 20px;
@@ -147,17 +136,18 @@ h1 {
   margin: 0 auto;
   padding-top: 20px;
   width: 200px;
+  margin-top: 10px;
 }
 
 .form-signup input {
-  width: calc(100% - 30px);
+  width: 100%;
   height: 30px;
   padding: 0 15px;
   margin-bottom: 6px;
   border: 1px solid #CCC;
   border-radius: 4px;
   background-color: #F6F6F6;
-  float: left;
+  float: center;
   font-family: arial;
 }
 
@@ -175,6 +165,24 @@ h1 {
   text-transform: uppercase;
   text-align: center;
 }
+
+
+.header-signup {
+  height: 100%;
+  width: 70px;
+  padding: 0 6px;
+  border: none;
+  border-radius: 4px;
+  margin-left: 8px;
+  font-family: arial;
+  font-size: 13px;
+  line-height: 36px;
+  color: #f3f3f3;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+
 .signuperror {
   padding-top: 14px;
   font-family: arial;
@@ -188,5 +196,13 @@ h1 {
   font-family: arial;
   font-size: 16px;
   color: green;
+  text-align: center;
+}
+
+h1 {
+  font-weight: 500;
+}
+h3 {
+  font-weight: 400;
   text-align: center;
 }

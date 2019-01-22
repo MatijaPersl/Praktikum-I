@@ -32,7 +32,7 @@
           echo '<p class="signupsuccess">Signup successful!</p>';
         }
       ?>
-      <form class="form-Signup" action="Includes/signup.inc.php" method="post">
+      <form class="form-signup" action="Includes/signup.inc.php" method="post">
         <input type="text" name="uid" placeholder="Username"><br>
         <input type="text" name="mail" placeholder="Email"><br>
         <input type="password" name="pwd" placeholder="Password"><br>

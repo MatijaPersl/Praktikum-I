@@ -26,13 +26,6 @@
         </ul>
       </nav>
       <div class="header-login">
-        <!--
-        Here is the HTML login form.
-        Notice that the "method" is set to "post" because the data we send is sensitive data.
-        The "inputs" I decided to have in the form include username/e-mail and password. The user will be able to choose whether to login using e-mail or username.
-
-        Also notice that using PHP, we can choose whether or not to show the login/signup form, or to show the logout form, if we are logged in or not. We do this based on SESSION variables which I explain in more detail in the login.inc.php file!
-        -->
         <?php
         if (!isset($_SESSION['uid'])) {
           echo '<form action="includes/login.inc.php" method="post">
@@ -42,7 +35,7 @@
           </form>
           <a href="signup.php" class="header-signup">Signup</a>';
         }
-        else  { // if (isset($_SESSION['id']))
+        else  {
           echo '<form action="includes/logout.inc.php" method="post">
             <button type="submit" name="login-submit">Logout</button>
           </form>';
