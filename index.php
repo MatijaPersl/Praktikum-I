@@ -1,6 +1,9 @@
 <?php
   require 'header.php';
+  error_reporting(0);
 ?>
+
+
 
 
 <main>
@@ -15,15 +18,17 @@
 
     if (mysqli_num_rows($result) > 0) {
       echo '<table class = "wrapper-main">';
-      echo "<td><b>NAME</b></td><td><b>PRICE</b></td><td><b>DESCRIPTION</b></td>";
+      echo "<td><b>ID</b></td><td><b>NAME</b></td><td><b>PRICE</b></td><td><b>DESCRIPTION</b></td>";
       echo "<tr></tr><tr></tr>";
       while ($row = mysqli_fetch_assoc($result)) {
         echo "<tr></tr>";
         echo "<tr>";
-        echo "</td><td>".$row["nameTaco"]."</td><td>".$row["priceTaco"]."</td><td>".$row["descTaco"]."</td><td><a href = 'addtocart.php'>Izberi</a></td>";
+        echo "<td>".$row["idTaco"]."</td><td>".$row["nameTaco"]."</td><td>".$row["priceTaco"]."</td><td>".$row["descTaco"]."</td><td><a href = 'addtocart.php'>".$_SESSION['idTaco']=$id."Izberi</a></td>";
         echo "</tr>";
 
       }
+
+
       echo "</table>";
 
     }
@@ -46,5 +51,5 @@
 
 <?php
   require 'footer.php';
-// ctrl alt b  = {}, ctrl alt f = []
+
 ?>
