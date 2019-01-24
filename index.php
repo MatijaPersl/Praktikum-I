@@ -23,11 +23,11 @@
       while ($row = mysqli_fetch_assoc($result)) {
         echo "<tr></tr>";
         echo "<tr>";
-        echo "<td>".$row["idTaco"]."</td><td>".$row["nameTaco"]."</td><td>".$row["priceTaco"]."</td><td>".$row["descTaco"]."</td><td><a href = 'addtocart.php'>".$_SESSION['idTaco']=$id."Izberi</a></td>";
-        echo "</tr>";
-
+        echo "<td>".$row["idTaco"]."</td><td>".$row["nameTaco"]."</td><td>".$row["priceTaco"]."</td><td>".$row["descTaco"]."</td>";
+        ?><td><a href = 'addtocart.php?idTaco=<?php echo $row["idTaco"]?>'>Izberi</a></td>
+        </tr>
+<?php
       }
-
 
       echo "</table>";
 

@@ -1,17 +1,17 @@
 <?php
-  // First we start a session which allow for us to store information as SESSION variables.
+
   session_start();
-  // "require" creates an error message and stops the script. "include" creates an error and continues the script.
+
   require "includes/dbh.inc.php";
 ?>
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="description" content="This is an example of a meta description. This will often show up in search results.">
     <meta name=viewport content="width=device-width, initial-scale=1">
     <title></title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
   </head>
   <body>
 

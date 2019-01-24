@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Titillium+Web');
+
 
 * {
   margin: 0;
@@ -204,5 +204,8 @@ h1 {
 }
 h3 {
   font-weight: 400;
+  text-align: center;
+}
+h5 {
   text-align: center;
 }
