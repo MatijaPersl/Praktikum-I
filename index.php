@@ -24,7 +24,7 @@
         echo "<tr></tr>";
         echo "<tr>";
         echo "<td>".$row["idTaco"]."</td><td>".$row["nameTaco"]."</td><td>".$row["priceTaco"]."</td><td>".$row["descTaco"]."</td>";
-        ?><td><a href = 'addtocart.php?idTaco=<?php echo $row["idTaco"]?>'>Izberi</a></td>
+        ?><td><a href = 'narocilo.php?idTaco=<?php echo $row["idTaco"]?>'>Izberi</a></td>
         </tr>
 <?php
       }
