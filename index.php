@@ -39,9 +39,7 @@
 
   }
   else {
-    echo '<p class="login-status">
-      Please Login
-    </p>';
+    echo '<p class="login-status">Please Login</p>';
   }
 ?>
 
