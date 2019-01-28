@@ -36,7 +36,9 @@
           <a href="signup.php" class="header-signup">Signup</a>';
         }
         else  {
+
           echo '<form action="includes/logout.inc.php" method="post">
+            Živjo, '.$_SESSION["uid"].'&nbsp
             <button type="submit" name="login-submit">Logout</button>
           </form>';
         }
