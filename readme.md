@@ -1,6 +1,6 @@
 # Information
 
-Projekt Praktikum-1 je spletna aplikacija, kjer so uporabljene tehnologije:
+Projekt Praktikum-1 je spletna aplikacija za naročanje takosov, kjer so uporabljene tehnologije:
 
   1. PHP 7.2.10
   2. HTML5, CSS
@@ -10,7 +10,7 @@ Uporabnik lahko:
 
   1. Se registrira
   2. Se prijavi
-  3. Naročilo preveri in potrdi
+  3. Naroči, naročilo preveri in potrdi
 
 Admin lahko:
 
