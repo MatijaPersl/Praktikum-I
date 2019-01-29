@@ -1,12 +1,9 @@
-# Praktikum-I
-Projekt pri predmetu Praktikum I
-
 # Information
 
 Projekt Praktikum-1 je spletna aplikacija, kjer so uporabljene tehnologije:
 
   1. PHP 7.2.10
-  2. HTML, CSS
+  2. HTML5, CSS
   3. SQL (phpmyadmin)
 
 Uporabnik lahko:
