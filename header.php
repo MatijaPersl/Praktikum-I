@@ -19,9 +19,11 @@
       <nav class="nav-header-main">
 
         <ul>
-          <li><a href="index.php">Home</a></li>
-          <li><a href="#">About me</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="index.php">Domov</a></li>
+          <?php if (isset($_SESSION['uid']) == 'admin') { ?>
+            <li><a href="pregledNarocil.php">Naročila</a></li>
+          <?php  } ?>
+          <li><a href="#">Kontakt</a></li>
         </ul>
       </nav>
       <div class="header-login">
