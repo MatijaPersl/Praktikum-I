@@ -1,7 +1,7 @@
 <?php
 
   session_start();
-
+  error_reporting(0);
   require "includes/dbh.inc.php";
 ?>
 <!DOCTYPE html>
@@ -20,7 +20,7 @@
 
         <ul>
           <li><a href="index.php">Domov</a></li>
-          <?php if (isset($_SESSION['uid']) == 'admin') { ?>
+          <?php if ($_SESSION['uid'] == 'admin') { ?>
             <li><a href="pregledNarocil.php">Naročila</a></li>
           <?php  } ?>
           <li><a href="#">Kontakt</a></li>
