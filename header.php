@@ -2,7 +2,8 @@
 
   session_start();
   error_reporting(0);
-  require "includes/dbh.inc.php";
+
+  require "Includes/dbh.inc.php";
 ?>
 <!DOCTYPE html>
 <html>

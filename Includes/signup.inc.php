@@ -70,10 +70,9 @@ if (isset($_POST['signup-submit'])) {
           $hashedPwd = password_hash($password, PASSWORD_DEFAULT);
 
           mysqli_stmt_bind_param($stmt, "sss", $username, $email, $hashedPwd);
-          // Then we execute the prepared statement and send it to the database!
-          // This means the user is now registered! :)
+
           mysqli_stmt_execute($stmt);
-          // Lastly we send the user back to the signup page with a success message!
+
           header("Location: ../signup.php?signup=success");
           exit();
 
@@ -81,12 +80,11 @@ if (isset($_POST['signup-submit'])) {
       }
     }
   }
-  // Then we close the prepared statement and the database connection!
   mysqli_stmt_close($stmt);
   mysqli_close($conn);
 }
 else {
-  // If the user tries to access this page an inproper way, we send them back to the signup page.
+
   header("Location: ../signup.php");
   exit();
 }

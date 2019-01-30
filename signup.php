@@ -1,6 +1,6 @@
 <?php
   require 'header.php';
-  error_reporting(0); 
+  error_reporting(0);
 ?>
 
 <main>
@@ -47,5 +47,4 @@
 
 <?php
   require 'footer.php';
-// ctrl alt b  = {}, ctrl alt f = []
 ?>

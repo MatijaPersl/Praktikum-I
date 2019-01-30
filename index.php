@@ -3,11 +3,20 @@
   error_reporting(0);
 ?>
 
-
-
-
 <main>
 <?php
+
+  if(isset($_GET["order"])){
+    if($_GET["order"] == "success"){
+      echo '<p class = "signupsuccess"><b>NAROČILO SPREJETO! :)</b></p>';
+      echo "<br>";
+    }
+    else {
+      echo '<p class = "signuperror"><b>NAROČILO NI BILO SPREJETO! :(</b></p>';
+      echo "<br>";
+    }
+  }
+
   if (isset($_SESSION['uid'])) {
 
     echo '<h1>Naroci svoj taco!</h1>';
@@ -43,11 +52,8 @@
   }
 ?>
 
-
 </main>
-
 
 <?php
   require 'footer.php';
-
 ?>
