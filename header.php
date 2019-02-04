@@ -24,7 +24,7 @@
           <?php if ($_SESSION['uid'] == 'admin') { ?>
             <li><a href="pregledNarocil.php">Naročila</a></li>
           <?php  } ?>
-          <li><a href="#">Kontakt</a></li>
+
         </ul>
       </nav>
       <div class="header-login">
