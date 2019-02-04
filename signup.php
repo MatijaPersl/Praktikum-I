@@ -8,6 +8,7 @@
     <section class="section-default">
       <h1>Signup</h1>
       <?php
+      // usi errorji pri registraciji
         if (isset($_GET["error"])) {
           if ($_GET["error"] == "emptyfields") {
             echo '<p class="signuperror">Fill in all field</p>';
@@ -28,9 +29,11 @@
             echo '<p class="signuperror">username is already taken</p>';
           }
         }
+        // uspešna registracija
         else if ($_GET["signup"] == "success") {
           echo '<p class="signupsuccess">Signup successful!</p>';
         }
+        
       ?>
       <form class="form-signup" action="Includes/signup.inc.php" method="post">
         <input type="text" name="uid" placeholder="Username"><br>
