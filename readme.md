@@ -17,3 +17,9 @@ Admin lahko:
 
   1. Pregleda naročila
   2. Izbriše naročilo
+
+Dostop do uporabnik/admin pogleda strani:
+
+  1. Pogleda se med seboj razlikujeta
+  2. Uporabnik: se registrira in tako pošlje podatke v bazo, kasneje se lahko s temi istimi podatki prijavi
+  3. Admin: ima že prej vnešene podatke v bazi, ki so dodeljeni le njemu

@@ -4,10 +4,10 @@ $dBUsername = "root";
 $dBPassword = "";
 $dBName = "loginsystem";
 
-// Create connection
+// Ustvari povezavo
 $conn = mysqli_connect($dBServername, $dBUsername, $dBPassword, $dBName);
 
-// Check connection
+// Preveri povezavo
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
