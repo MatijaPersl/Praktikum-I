@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 if (isset($_POST['narocilo-submit'])) {
   error_reporting(0);
@@ -6,14 +7,23 @@ if (isset($_POST['narocilo-submit'])) {
 
   $idTaco = $_POST['narocilo-submit'];
 
-  $sql = "INSERT INTO narocila (nameNarocilo, priceNarocilo)
-          SELECT nameTaco, priceTaco FROM taco
-          WHERE idTaco = $idTaco";
-  $result = mysqli_query($conn, $sql);
+  $max = "SELECT idKosarica from kosarica ORDER BY idKosarica DESC LIMIT 1";
+  $result = mysqli_query($conn, $max);
 
-  header("Location: ../index.php?order=success");
+for ($x = 1; $x <= $row['idKosarica']; $x++){
+
+  $sql = "INSERT INTO narocila (nameNarocilo, priceNarocilo, nameNarocnik)
+          select nameTaco, priceTaco, ?
+          from taco
+          WHERE idTaco = ?;";
+
+   $stmt = mysqli_prepare($conn, $sql ) ;
+   mysqli_stmt_bind_param($stmt, "si",$_SESSION['uid'], $idTaco);
+   mysqli_stmt_execute($stmt);
+}
+
+   header("Location: ../index.php?order=success");
 
 
 }
-
- ?>
+?>

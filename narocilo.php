@@ -8,7 +8,6 @@ $idTaco = $_GET['idTaco'];
 $sql = "SELECT nameTaco, priceTaco, descTaco FROM taco WHERE idTaco = $idTaco";
 $result = mysqli_query($conn, $sql);
 
-
 echo "<br><br>";
 echo "<h1>Vaše naročilo</h1>";
 echo "<br><br>";
