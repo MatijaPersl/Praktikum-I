@@ -1,8 +1,9 @@
 <?php
-
+error_reporting(0);
 require 'dbh.inc.php';
 
 $idNarocilo = $_GET['idTaco'];
+$idKosarica = $_GET['idKosarica'];
 
 if (isset($idNarocilo)) {
   $sql = "DELETE FROM narocila WHERE idNarocilo = $idNarocilo";
@@ -10,12 +11,10 @@ if (isset($idNarocilo)) {
   header("Location: ../pregledNarocil.php?order=delete");
 }
 
-$idKosarica = $_GET['idKosarica'];
-
 if (isset($idKosarica)) {
   $sql = "DELETE FROM kosarica WHERE idKosarica = $idKosarica";
   $result = mysqli_query($conn, $sql);
-  header("Location: ../pregledNarocil.php?order=delete");
+  header("Location: ../kosarica.php?order=delete");
 }
 
 

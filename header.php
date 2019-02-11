@@ -20,11 +20,12 @@
         <ul>
           <li><a href="index.php">Domov</a></li>
           <?php if ($_SESSION['uid'] == 'admin') { ?>
-            <li><a href="pregledNarocil.php">Naročila</a></li>
-          <?php  } else if (isset($_SESSION['uid'])) {?>
             <li><a href="kosarica.php">Košarica</a></li>
-          <?php } ?>
-
+            <li><a href="pregledNarocil.php">Naročila</a></li>
+          <?php  } elseif (isset($_SESSION['uid'])) { ?>
+            <li><a href="kosarica.php">Košarica</a></li>
+          <?php  } ?>
+          
         </ul>
       </nav>
       <div class="header-login">

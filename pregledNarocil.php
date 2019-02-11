@@ -20,10 +20,8 @@ if($_SESSION['uid'] == 'admin') {
   <h1>Prejeta Naročila</h1>
   <br><br>
     <table class = "wrapper-main">
-      <td><b>JED</b></td><td><b>CENA</b></td><td><b>NAROČNIK</b></td>
-      <tr></tr><tr></tr>
+      <td><b>JED</b></td><td><b>CENA</b></td><td><b>NAROČNIK</b></td>  
       <?php while ($row = mysqli_fetch_assoc($result)) {?>
-        <tr></tr>
         <tr>
           <td><?php echo $row["nameNarocilo"] ?></td><td><?php echo $row["priceNarocilo"]?></td><td><?php echo $row["nameNarocnik"]?></td>
           <td><a href = 'Includes/delete.inc.php?idTaco=<?php echo $row["idNarocilo"]?>'>Zavrni</a></td>

@@ -6,7 +6,7 @@ require 'dbh.inc.php';
   $idTaco = $_GET['idTaco'];
   echo $idTaco;
 
-  $sql = "INSERT INTO kosarica (nameKosarica, priceKosarica, nameNarocnik)
+  $sql = "INSERT INTO kosarica (nameKosarica, priceKosarica, nameNarocnika)
           select nameTaco, priceTaco, ?
           FROM taco
           WHERE idTaco = ?;" ;
