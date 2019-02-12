@@ -19,7 +19,7 @@ $result = mysqli_query($conn, $sql);
 if (mysqli_num_rows($result) > 0) {
   echo "<form action='Includes/narocilo.inc.php' method='post'>";
   echo '<table>';
-  echo "<td><b>ID</b></td><td><b>NAME</b></td><td><b>PRICE</b></td><td><b>NAROČNIK</b></td>";
+  echo "<td><b>ID</b></td><td><b>NAME</b></td><td><b>PRICE</b></td>";
   while ($row = mysqli_fetch_assoc($result)) {
     echo "<tr>";
     echo "<td>".$row["idKosarica"]."</td><td>".$row["nameKosarica"]."</td><td>".$row["priceKosarica"]."</td>";
