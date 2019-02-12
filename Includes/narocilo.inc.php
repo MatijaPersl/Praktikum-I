@@ -4,8 +4,8 @@ require 'dbh.inc.php';
 error_reporting(0);
 
 
-  $sql = "INSERT INTO narocila (nameNarocilo, priceNarocilo, nameNarocnik)
-        SELECT nameKosarica, priceKosarica, ?
+  $sql = "INSERT INTO narocila (nameNarocilo, priceNarocilo, kolicinaNarocilo, nameNarocnik)
+        SELECT nameKosarica, priceKosarica, kolicinaKosarica, ?
         FROM kosarica
         WHERE nameNarocnika = ?;" ;
 

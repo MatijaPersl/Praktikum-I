@@ -7,6 +7,10 @@
       echo "<br>";
     }
   }
+
+  $kolicina = $_POST['kolicina'];
+  echo $kolicina;
+
 echo "<br><br>";
 echo '<h1>Košarica</h1>';
 echo "<br><br>";
@@ -19,15 +23,15 @@ $result = mysqli_query($conn, $sql);
 if (mysqli_num_rows($result) > 0) {
   echo "<form action='Includes/narocilo.inc.php' method='post'>";
   echo '<table>';
-  echo "<td><b>ID</b></td><td><b>NAME</b></td><td><b>PRICE</b></td>";
+  echo "<td><b>ID</b></td><td><b>NAME</b></td><td><b>PRICE</b></td><td><b>KOLIČINA</b></td>";
   while ($row = mysqli_fetch_assoc($result)) {
     echo "<tr>";
-    echo "<td>".$row["idKosarica"]."</td><td>".$row["nameKosarica"]."</td><td>".$row["priceKosarica"]."</td>";
+    echo "<td>".$row["idKosarica"]."</td><td>".$row["nameKosarica"]."</td><td>".$row["priceKosarica"]*$row["kolicinaKosarica"]." €</td><td>".$row["kolicinaKosarica"]."</td>";
     ?><td><a href = 'Includes/delete.inc.php?idKosarica=<?php echo $row["idKosarica"]?>'>Izbrši</a></td><?php
     echo "</tr>";
   }
   echo "<tr>";
-  echo "<td><button type = 'submit' class= 'potrdi2'>Potrdi</button></td>";
+  echo "<td><button type = 'submit' class= 'potrdi'>Potrdi</button></td>";
   echo "<tr>";
 
   echo "</table>";

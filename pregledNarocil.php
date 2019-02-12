@@ -18,14 +18,13 @@ if($_SESSION['uid'] == 'admin') {
   if (mysqli_num_rows($result) > 0) { ?>
 
   <h1>Prejeta Naročila</h1>
-  <br><br>
-    <table class = "wrapper-main">
-      <td><b>JED</b></td><td><b>CENA</b></td><td><b>NAROČNIK</b></td>  
+    <table>
+      <td><b>JED</b></td><td><b>CENA</b></td><td><b>NAROČNIK</b></td><td><b>KOLIČINA</b></td>
       <?php while ($row = mysqli_fetch_assoc($result)) {?>
         <tr>
-          <td><?php echo $row["nameNarocilo"] ?></td><td><?php echo $row["priceNarocilo"]?></td><td><?php echo $row["nameNarocnik"]?></td>
+          <td><?php echo $row["nameNarocilo"] ?></td><td><?php echo $row["priceNarocilo"]*$row["kolicinaNarocilo"]?> €</td><td><?php echo $row["nameNarocnik"]?></td><td><?php echo $row["kolicinaNarocilo"]?></td>
           <td><a href = 'Includes/delete.inc.php?idTaco=<?php echo $row["idNarocilo"]?>'>Zavrni</a></td>
-
+        </tr>
         <?php }
       } else {
           echo '<p class = "signuperror"><b>NI NAROČIL!<b></p>';

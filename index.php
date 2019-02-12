@@ -30,23 +30,40 @@
     $result = mysqli_query($conn, $sql);
 
     if (mysqli_num_rows($result) > 0) {
-      echo '<form action = "kosarica.php" method="post">';
+
       echo '<table>';
       echo "<td><b>ID</b></td><td><b>NAME</b></td><td><b>PRICE</b></td><td><b>DESCRIPTION</b></td>";
 
       while ($row = mysqli_fetch_assoc($result)) {
 
         echo "<tr>";
-        echo "<td>".$row["idTaco"]."</td><td>".$row["nameTaco"]."</td><td>".$row["priceTaco"]."</td><td>".$row["descTaco"]."</td>";
-        ?><td><a href = 'Includes/dodajVKosarico.inc.php?idTaco=<?php echo $row["idTaco"]?>'>Izberi</a></td>
+        echo "<td>".$row["idTaco"]."</td><td>".$row["nameTaco"]."</td><td>".$row["priceTaco"]." €</td><td>".$row["descTaco"]."</td>";
+        ?> <!--<td><a href = 'Includes/dodajVKosarico.inc.php?idTaco=<?php //echo $row["idTaco"]?>'>Izberi</a></td> -->
+    <td>
+      <form action="Includes/dodajVKosarico.inc.php" method="get">
+        <input type="hidden" name="idTaco" value="<?php echo $row["idTaco"] ?>"/>
+        <select name="kolicina">
+          <option value="0"></option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+        <button type="submit" name="submit" class = "dodaj">Dodaj</button>
+        </form>
+    </td>
+
+    <!-- <td><a href = 'Includes/dodajVKosarico.inc.php?idTaco=<?php //echo $row["idTaco"]?>&kolicina='>Izberi</a></td> -->
+
       </tr>
 <?php
       }
       echo "<tr>";
-      echo "<td><button type = 'submit' class = 'potrdi'>Potrdi</button><td>";
+
       echo "</tr>";
       echo "</table>";
-      echo "</form>";
+
     }
 
     else {
